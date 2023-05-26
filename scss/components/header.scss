@@ -1,5 +1,6 @@
+@use '../utils/breakpoints.scss' as *;
+
 .header {
-  margin: 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,7 +15,8 @@
     font-weight: 200;
   }
 
-  &--mobile-button {
+  &--hamburger {
+    display: block;
     width: 28px;
     height: 19px;
     position: relative;
@@ -40,9 +42,13 @@
         transition: all 0.3s ease-in-out;
       }
     }
+
+    @include tablet-and-up {
+      display: none;
+    }
   }
 
-  &--mobile-button.clicked {
+  &--hamburger.clicked {
     span {
       &.top {
         width: 33px;
@@ -59,6 +65,34 @@
         top: 7px;
         left: -4px;
       }
+    }
+  }
+
+  &--desktop-menu {
+    display: none;
+
+    @include tablet-and-up {
+      display: flex;
+      gap: 36px;
+      font-family: var(--font-text);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+
+      &--item {
+        cursor: pointer;
+        padding: 4px 0;
+      }
+
+      &__active {
+        border-bottom: 2px solid var(--white);
+        font-weight: 700;
+      }
+    }
+
+    @include desktop {
+      gap: 60px;
     }
   }
 }

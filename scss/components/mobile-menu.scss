@@ -1,0 +1,34 @@
+.mobile-menu {
+  position: absolute;
+  margin: 0;
+  top: 74px;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-text);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+
+  &--item {
+    cursor: pointer;
+    padding: 8px 0;
+  }
+
+  &__underlined {
+    border-bottom: 2px solid var(--white);
+  }
+
+  left: -2000px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  &.show {
+    opacity: 1;
+    left: 0;
+  }
+}

@@ -1,0 +1,53 @@
+@use '../utils/breakpoints' as *;
+
+.first {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include desktop {
+    max-width: 370px;
+  }
+
+  &--title {
+    font-size: 36px;
+    line-height: 46px;
+
+    @include desktop {
+      font-size: 48px;
+      line-height: 61px;
+    }
+  }
+  &--description {
+    max-width: 240px;
+
+    @include desktop {
+      max-width: 400px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &--read-more {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+
+    span {
+      font-size: 18px;
+      margin-left: 5px;
+    }
+
+    @include desktop {
+      margin-top: 20px;
+      font-size: 20px;
+      span {
+        font-size: 22px;
+      }
+    }
+  }
+}

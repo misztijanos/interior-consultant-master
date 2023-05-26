@@ -15,19 +15,55 @@
   <body>
     <header class="header">
       <div class="header--logo">this interior</div>
-      <div class="mobile-menu">
-        <div class="header--mobile-button">
-          <span class="top"></span>
-          <span class="middle"></span>
-          <span class="bottom"></span>
-        </div>
+      <div class="header--hamburger">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
       </div>
+      <ul class="header--desktop-menu">
+        <li class="header--desktop-menu--item header--desktop-menu__active">
+          Home
+        </li>
+        <li class="header--desktop-menu--item">Collection</li>
+        <li class="header--desktop-menu--item">About</li>
+        <li class="header--desktop-menu--item">Contact</li>
+      </ul>
     </header>
     <main>
-      <div class="left"></div>
-      <div class="right"></div>
+      <div class="first">
+        <h1 class="first--title">Modern interior</h1>
+        <p class="first--description">
+          A full-Service residential & commercial interior design and staging
+          company offering professional organizing & eco-services.
+        </p>
+        <a class="first--read-more" href="#">Read more <span>&#8594;</span></a>
+      </div>
+      <div class="second">
+        <img src="photo1.png" alt="interior design" class="second--pic" />
+        <div class="second--card">
+          <div class="top">
+            <img src="photo2.png" alt="headshot" />
+            <div>
+              <h3 class="name">Aliza Webber</h3>
+              <p class="title">interior designer</p>
+            </div>
+          </div>
+          <h2 class="description">Designed in 2020 by Aliza Webber</h2>
+        </div>
+      </div>
     </main>
-    <footer></footer>
+    <footer>
+      <p>
+        created by <a href="https:\\github.com/misztijanos">Miszti Janos</a>
+      </p>
+    </footer>
+
+    <ul class="mobile-menu">
+      <li class="mobile-menu--item mobile-menu__underlined">Home</li>
+      <li class="mobile-menu--item">Collection</li>
+      <li class="mobile-menu--item">About</li>
+      <li class="mobile-menu--item">Contact</li>
+    </ul>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

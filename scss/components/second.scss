@@ -1,0 +1,68 @@
+@use '../utils/breakpoints' as *;
+
+.second {
+  position: relative;
+
+  @include desktop {
+    max-width: 60%;
+  }
+
+  &--pic {
+    width: 100%;
+  }
+
+  &--card {
+    background-color: var(--background);
+    position: absolute;
+    width: 86%;
+    max-width: 410px;
+    bottom: -100px;
+    right: 10px;
+    height: 140px;
+
+    .top {
+      display: flex;
+      align-items: center;
+      font-family: var(--font-text);
+
+      img {
+        width: 40px;
+        border-radius: 50%;
+        margin: 14px;
+        @include desktop {
+          width: 45px;
+        }
+      }
+      .name {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 15px;
+        @include desktop {
+          font-size: 14px;
+        }
+      }
+      .title {
+        margin-top: 6px;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 12px;
+        color: var(--dark-gray);
+        @include desktop {
+          font-size: 12px;
+        }
+      }
+    }
+    .description {
+      max-width: 200px;
+      margin-left: 14px;
+      font-size: 18px;
+      line-height: 23px;
+
+      @include desktop {
+        max-width: 250px;
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@use '../utils/breakpoints' as *;
+
+.mobile-header--logo,
+main,
+footer {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  &.hide {
+    opacity: 0;
+  }
+}
+
+header,
+main,
+footer {
+  width: 92vw;
+  max-width: 1440px;
+  margin: 20px auto;
+  @include tablet-and-up {
+    margin: 40px auto;
+  }
+}
+
+main {
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include desktop {
+    margin: 100px auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+footer {
+  margin-top: 160px;
+  @include desktop {
+    margin-top: 260px;
+  }
+}
